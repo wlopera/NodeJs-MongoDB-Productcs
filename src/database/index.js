@@ -9,7 +9,7 @@ module.exports.Database = (collection) =>
       // Patron sigleton
       if (!connection) {
         const client = new MongoClient(Config.mongoUri);
-        connection = await new MongoClient().connect();
+        connection = await client.connect();
         debug("Nueva conexión realizaada con MongoDB Atlas");
       }
       debug("Retornando la colección requerida");
