@@ -45,3 +45,36 @@ ver: https://www.npmjs.com/package/nodemon
 * express: Framework web minimalista, rápido y sin opiniones para node.
 * mongodb: El controlador oficial de MongoDB para Node.js.
 * nodemon: Herramienta que ayuda a desarrollar aplicaciones basadas en Node.js al reiniciar automáticamente la aplicación del nodo cuando se detectan cambios en los archivos del directorio.
+
+## Configurar el proyecto
+
+* node-mongodb-products\.env
+```
+PORT=3000
+```
+
+* node-mongodb-products\src\config\index.js
+```
+require("dotenv").config();
+
+module.exports.Config = {
+  port: process.env.PORT,
+};
+```
+
+* node-mongodb-products\index.js
+```diff
+...
++ const debug = require("debug")("app:main");
+const { Config } = require("./src/config/index");
+...
+
++ app.listen(Config.port, () => {
++  debug(`Servidor escuchando en el puerto ${Config.port}`);
++ });
+```
+
+* package.json
+```diff
++   "dev": "set DEBUG=app:* & nodemon index.js"
+```
