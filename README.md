@@ -78,3 +78,47 @@ const { Config } = require("./src/config/index");
 ```diff
 +   "dev": "set DEBUG=app:* & nodemon index.js"
 ```
+
+## Agregar manejo de errores
+* node-mongodb-products\src\common\response.js
+```
+const CreateError = require("http-errors");
+
+module.exports.Response = {
+  success: (res, status = 200, message = "OK", body = {}) => {
+    res.status(status).json({ message, body });
+  },
+  error: (res, error = null) => {
+    const { statusCode, message } = error
+      ? error
+      : new CreateError.InternalServerError();
+    res.status(statusCode).json({ message });
+  },
+};
+```
+
+## Actualizar node-mongodb-products\src\products\controller.js
+
+```diff
+const createProduct = async (req, res) => {
+  try {
+    const { body } = req;
+    if (!body || Object.keys(body).length === 0) {
++      Response.error(res, new CreateError.BadRequest());
+    } else {
+      const insertedId = await ProductsService.create(body);
++      Response.success(res, 201, "Producto agregado", insertedId);
+    }
+  } catch (error) {
+    debug(error);
++    Response.error(res);
+  }
+};
+
+```
+![Captura](https://user-images.githubusercontent.com/7141537/171667834-1d843250-3cfd-4f33-bd33-11bab9952f42.PNG)
+![Captura1](https://user-images.githubusercontent.com/7141537/171667828-f0158e35-e1c9-477b-a694-ac88801034d1.PNG)
+
+* Ejemplo de manejo de errores 
+![Captura2](https://user-images.githubusercontent.com/7141537/171667831-f02b2acc-730f-4f02-a939-4b1a322aaaf0.PNG)
+
