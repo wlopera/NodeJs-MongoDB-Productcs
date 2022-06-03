@@ -193,6 +193,26 @@ const deleteProduct = async (req, res) => {
 };
 ```
 
+* node-mongodb-products\src\products\index.js
+``` 
+const express = require("express");
+const { ProductsController } = require("./controller");
+
+const router = express.Router();
+
+module.exports.ProductsAPI = (app) => {
+  router
+    .get("/", ProductsController.getProducts) //http"//localhost:3000/api/products/
+    .get("/report", ProductsController.generateReport) //http"//localhost:3000/api/report/
+    .get("/:id", ProductsController.getProduct) //http"//localhost:3000/api/products/25
+    .post("/", ProductsController.createProduct) //http"//localhost:3000/api/products/
+    .put("/:id", ProductsController.updateProduct) //http"//localhost:3000/api/products/
+    .delete("/:id", ProductsController.deleteProduct); //http"//localhost:3000/api/products/25
+
+  app.use("/api/products", router);
+};
+```
+
 ## Salida
 ![Captura](https://user-images.githubusercontent.com/7141537/171965917-76160d33-36e8-4cd0-8ee1-9e75069c5bca.PNG)
 ![Captura1](https://user-images.githubusercontent.com/7141537/171965919-3b4a7a60-9900-4c6a-8d36-ae74b0aea894.PNG)
