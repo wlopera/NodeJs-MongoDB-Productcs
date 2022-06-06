@@ -267,5 +267,7 @@ module.exports.ProductsUtil = {
 ![Captura1](https://user-images.githubusercontent.com/7141537/172206173-897057d7-aa37-4138-ab5b-7b38f995ff41.PNG)
 ![Captura3](https://user-images.githubusercontent.com/7141537/172206165-b6dafc70-fb00-495d-8641-c901f181d113.PNG)
 ![Captura4](https://user-images.githubusercontent.com/7141537/172206170-cc560032-3655-4cec-b511-51cafffc32f8.PNG)
+![Captura](https://user-images.githubusercontent.com/7141537/172206387-0fa2291e-f9b9-4c46-9993-aa9c2268c16e.PNG)
+
 
 
