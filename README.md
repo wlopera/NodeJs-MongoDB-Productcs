@@ -261,3 +261,11 @@ module.exports.ProductsUtil = {
 ![Captura5](https://user-images.githubusercontent.com/7141537/171965916-f5b43908-7165-4e4e-81ad-cb4b7650eb86.PNG)
 ![Captura](https://user-images.githubusercontent.com/7141537/171965974-f60a4720-ff1c-49bc-9194-0e3802e7460e.PNG)
 
+## Agregar Usuario
+## Agregar Ventas y validar existencia de producto y usuario asi como cantidad a vender.
+![Captura](https://user-images.githubusercontent.com/7141537/172206171-efe1c26c-e193-4f47-91bd-0acfbfd0f717.PNG)
+![Captura1](https://user-images.githubusercontent.com/7141537/172206173-897057d7-aa37-4138-ab5b-7b38f995ff41.PNG)
+![Captura3](https://user-images.githubusercontent.com/7141537/172206165-b6dafc70-fb00-495d-8641-c901f181d113.PNG)
+![Captura4](https://user-images.githubusercontent.com/7141537/172206170-cc560032-3655-4cec-b511-51cafffc32f8.PNG)
+
+
