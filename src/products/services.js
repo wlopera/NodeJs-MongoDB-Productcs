@@ -11,7 +11,7 @@ const getAll = async () => {
 
 const getById = async (id) => {
   const collection = await Database(COLLECTION);
-  return collection.findOne({ _id: ObjectId(id) });
+  return await collection.findOne({ _id: ObjectId(id) });
 };
 
 const create = async (product) => {
