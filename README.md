@@ -2,7 +2,7 @@
 Crear productos usando NoderJS y MongoDB
  
 -----------------------------------------------------------------------------
-Crear proyecto y base de datos en Mondo Atlas
+Crear proyecto y base de datos en Mongo Atlas
 -----------------------------------------------------------------------------
 1. Crear Organizacion (wlopera)
 2. Crear proyecto (Curso JS-NodeJS)
