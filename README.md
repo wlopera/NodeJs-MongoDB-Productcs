@@ -8,7 +8,12 @@ Crear proyecto y base de datos en Mongo Atlas
 2. Crear proyecto (Curso JS-NodeJS)
 3. Crear Cluster: JsNode (puede contener varias Bases de datos)
 4. Crear User: user/pass: admin/_pASSWORD_
-5. Crear acceso al cluster: (ALLOW ACCESS FROM ANYWHERE)
+5. Crear acceso al cluster: (ALLOW ACCESS FROM ANYWHERE) 
+      - user admin
+      - Add a connection IP address: Allow Access  from AnyWhere
+      - Create a database user: user/password: admin/_PASSWORD_
+ 6.- Metodo de conexión:
+    - mongosh "mongodb+srv://cluster0.eeebs1l.mongodb.net/myFirstDatabase" --apiVersion 1 --username admin
 -----------------------------------------------------------------------------
 
 -----------------------------------------------------------------------------
